@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTE FOR HARPER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #1c1c1e;
+            color: #e5e5e5;
+            padding: 20px;
+        }
+
+        header {
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #2a2a2d;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+        }
+
+            .container:hover {
+                box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+                transform: scale(1.02);
+            }
+
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+        }
+
+            .student-info div {
+                font-size: 1.2rem;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #333;
+        }
+
+            table th, table td {
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid #444;
+            }
+
+            table th {
+                background-color: #ff69b4;
+                color: white;
+                font-size: 1.1rem;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #292929;
+            }
+
+            table tr:hover {
+                background-color: #3d3d3d;
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .contact-button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+            .contact-button:hover {
+                background-color: #ff85c0;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="vfhlogo.jpg" alt="Logo">
+    </header>
+
+    <div class="container">
+        <h1>THESE CANNOT BE PROMISED. THESE ARE ONLY MY GOALS!</h1>
+        <br />
+        <h1>Jobs</h1>
+        <h1>--------</h1>
+        <br />
+        <p>     1. Minimize the 2 week employment time to 1 week. This will give more opportunity for people to have a job.</p>
+        <br />
+        <p>     2. Add extra "job points" if jobs are done well. You can get rewards like homework passes, snacks, etc.</p>
+        <br />
+        <p>     3. Add or replace jobs every month. For example, one month we have our organization crew, then we dont, and after another month it goes back to normal again.</p>
+        <br />
+        <p>     4. Allow two people once a week to team up for one of their jobs to make it more effective.</p>
+        <br />
+        <p>     5. Give people MORE MONEY FOR JOBS. I feel that the current payment isnt enough, and I feel like it should be slightly higher.</p>
+        <br />
+        <br />
+        <h1>Money</h1>
+        <h1>--------</h1>
+        <br />
+        <p>     1. Give people a weekly paycheck based on behavior. Ex: Regular weekly pay: 200</p>
+        <br />
+        <p>     2. Have fines be reasonable, but slightly higher based on the reason for the fine. Ex: Not putting up chair = -$250 instead of -$50 or -$100</p>
+        <br />
+        <br />
+        <h1>Snacks</h1>
+        <h1>--------</h1>
+        <br />
+        <p>     1. Snack either every friday or every 2 days.</p>
+        <br />
+        <p>     2. Give people passes for snacks they bring from home they can have any day and any time.</p>
+        <br />
+        <br />
+        <h1>Extra</h1>
+        <h1>--------</h1>
+        <br />
+        <p>     1. Crack down on bullying</p>
+        <p>         - Make sure its true</p>
+        <p>         - Tell a staff member</p>
+        <p>         - Fine them for a reasonable amount</p>
+        <br />
+        <p>     2. Extra recess once a month (the most allowed)</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VOTE FOR HARPER</p>
+        <h2>Site made by Harper Arndell</h2>
+    </footer>
+
+    <script>
+        // Hex color vars
+        function getGradeColor(grade) {
+            switch (grade) {
+                case 'A': return '#ff69b4';
+                case 'A+': return '#ff7fbf';
+                case 'A-': return '#ff5c92';
+                case 'B': return '#ff5f88';
+                case 'B+': return '#ff6f99';
+                case 'B-': return '#ff4f77';
+                case 'C': return '#ff4c4c';
+                case 'C+': return '#ff3c3c';
+                case 'C-': return '#ff2c2c';
+                case 'D': return '#ff3a3a';
+                case 'D+': return '#ff4a4a';
+                case 'D-': return '#ff1a1a';
+                case 'F': return '#ff0000';
+                default: return '#e5e5e5';
+            }
+        }
+
+        // Get cells + set grad
+        document.querySelectorAll('td[data-grade]').forEach(cell => {
+            const grade = cell.getAttribute('data-grade');
+            if (['A', 'A+', 'A-', 'B', 'B+', 'B-', 'C', 'C+', 'C-', 'D', 'D+', 'D-', 'F'].includes(grade)) {
+                cell.style.color = getGradeColor(grade);
+                cell.style.fontWeight = 'bold';
+            } else {
+                cell.textContent = "E: Invalid Grade";
+                cell.style.color = '#ffffff';
+                cell.style.fontWeight = 'bold';
+            }
+        });
+    </script>
+
+</body>
+</html>
